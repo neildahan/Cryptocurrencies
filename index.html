@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="stars-bg2.mp4" type="video/mp4">
+  </video>
+
+  <div class="header">
+    <div class="menu">
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <ul class="navbar-nav">
+          <img src="blockchain.png" />
+          <a class="navbar-brand">Crypto</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="liveReports">Live Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="search">
+      <nav class="navbar navbar-light bg-dark">
+        <form class="form-inline">
+          <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search"
+            aria-label="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">
+            Search
+          </button>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <div hidden id="loader">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player class="player" src="https://assets1.lottiefiles.com/packages/lf20_6q3x8d8e.json"
+      background="transparent" speed="1" style="width: 500px; height: 500px" loop autoplay></lottie-player>
+  </div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">My Favorite Coin List</h4>
+          <h6>Unfortunately you can not pick more than 5 favorite coins.<br> Please remove a coin from your favorites to
+            add a new coin</h6>
+        </div>
+        <div class="modal-body">
+          <ul class="favorites-list">
+
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="body">
+    <h1 class="headline">Cryptocurrencies</h1>
+    <div class="card-deck" id="card-deck"></div>
+    <div class="bodyDiv"id="bodyDiv"></div>
+    
+    <div class="reportDiv" hidden id="chartContainer"></div>
+    </div>
+  </div>
+ 
+
+
+
+  <div class="aboutDiv" hidden id="aboutDiv">
+    <h4 class="about-me-text">Hello, Nice to meet you! My name is Neil and i am a fullstack developer student at John Bryce</h4>  
+    <div id="about-me">
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_UUvrir.json" background="transparent" speed="1"
+      style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+  </div>
+  </div>
+  
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="script.js"></script>
+  
+
+
+  
+</body>
+
+
+</html>

@@ -1,0 +1,73 @@
+==========================DONE===============================
+  function aboutPage() {
+    pageLoader();
+    $(".card").remove();
+    headline.innerHTML = "About";
+  }
+
+  function liveReportsPage() {
+    pageLoader();
+    $(".card").remove();
+    headline.innerHTML = "Live Reports";
+  }
+
+
+  function pageLoader() {
+    loader.removeAttribute("hidden");
+    setTimeout(() => {
+      loader.setAttribute("hidden", "");
+    }, 500);
+    createCoinCard(coinArr[0], 0);
+  }
+
+==========================TODO===============================
+HTML
+- div.products
+- div.cart
+
+
+CSS
+- flex : body, both div
+- * -> all margins, box-sizing
+- product box
+
+
+JS 
+- create array of coins
+- coin object{
+    - id -number
+    - name -string
+    - priceInUsd -number
+    - priceInEur -number
+    - priceInIls -number
+    - imgUrl -string
+    - isFavorite -boolean
+}
+
+
+- show()
+  - run over the array and display the array
+  - for loop
+    createProduct(arr[i])
+    
+
+- createProduct(prod)
+    - create element div.product
+    - create element img with src of prod.imgUrl
+    - create element h1 with innerHTML of prod.name
+    - create element h1 with innerHTML of prod.price
+    - create element h1 (set the class to "stock") with innerHTML of prod.stock
+    - create element btn with addEventListener -> click, (addToCart)
+    - set the id of the button to prod.id
+    - div.product appendChild all the above
+
+
+- addToCart(e)
+    - e.target is btn that was pressed
+    - prod = arr.find(obj.id === e.target.id)
+    - prod.stock--
+    - e.target.parentElement.querySelector(".stock").innerHtml = prod.stock
+    -
+    - cart push prod 
+    - draw on the cart div
+    
